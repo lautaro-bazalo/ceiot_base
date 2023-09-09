@@ -130,7 +130,7 @@ Si te incomoda lo parco de openbox pelado.
 
 ```
 sudo apt install tasksel
-apt tasksel --list-tasks
+tasksel --list-tasks
 ```
 Elegí el desktop environment de tu gusto, la cátedra ha usado mate-desktop pero no lo ha probado mucho ni medido el espacio que ocupa
 
@@ -506,7 +506,7 @@ modificar en config.h
 
 Dependiendo del modelo, puede hacer falta oprimir los botones para el paso **flash**:
 
-#### Receta 1 (comprobada por docente)
+#### Receta 1 (comprobada por docente) 
 
     idf.py flash
 
@@ -532,6 +532,11 @@ Dependiendo del modelo, puede hacer falta oprimir los botones para el paso **fla
 # apretar y soltar **BOOT**
 # soltar **RESET**
 ```
+    idf.py flash
+    
+#### Receta 3 (comprobada por docente)
+
+Colocar un capacitor de 1 uF entre enable y tierra
 
     idf.py flash
 
