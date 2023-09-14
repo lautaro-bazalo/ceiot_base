@@ -30,7 +30,7 @@ class Main implements EventListenerObject, GETResponseListener {
     let target = <HTMLElement>evt.target;
             
     if (target.id=="boton") {
-      this.api.requestGET("device",this);
+      this.api.requestGET("http://localhost:9291/device",this);
       console.log("handling boton");
     }
    
