@@ -20,7 +20,7 @@ class Main implements EventListenerObject, GETResponseListener {
   }
 
   main():void {
-      this.api.requestGET("localhost:9291/device",this);
+      this.api.requestGET("http://localhost:9291/device",this);
       document.getElementById("boton").addEventListener("click",this);
 
   }
@@ -28,7 +28,6 @@ class Main implements EventListenerObject, GETResponseListener {
   handleEvent(evt:Event):void{
 	  
     let target = <HTMLElement>evt.target;
-    let type   = evt.type;
             
     if (target.id=="boton") {
       this.api.requestGET("device",this);

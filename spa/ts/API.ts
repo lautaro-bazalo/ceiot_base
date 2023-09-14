@@ -6,8 +6,9 @@ class API{
 
   requestGET(url:string, listener: GETResponseListener):void {
     let xhr:XMLHttpRequest = new XMLHttpRequest();
+    xhr.setRequestHeader("Access-Control-Allow-Origin","*")
     xhr.onreadystatechange = function() {
-      if(xhr.readyState == 4) {
+      if(xhr.readyState == XMLHttpRequest.DONE) {
         if(xhr.status == 200) {
           listener.handleGETResponse(xhr.status,xhr.responseText);
         } else {
